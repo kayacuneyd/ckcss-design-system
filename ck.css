@@ -1,0 +1,374 @@
+
+/* ck.css 15.11.2024 by Cüneyt Kaya */
+html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
+/* The beginning of the extraction from normalize.css (by Nicolas Gallagher and Jonathan Neal) [git.io/normalize] */
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
+article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{display:block}summary{display:list-item}
+audio,canvas,progress,video{display:inline-block}progress{vertical-align:baseline}
+audio:not([controls]){display:none;height:0}[hidden],template{display:none}
+a{background-color:transparent}a:active,a:hover{outline-width:0}
+abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}
+b,strong{font-weight:bolder}dfn{font-style:italic}mark{background:#ff0;color:#000}
+small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sub{bottom:-0.25em}sup{top:-0.5em}figure{margin:1em 40px}img{border-style:none}
+code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}hr{box-sizing:content-box;height:0;overflow:visible}
+button,input,select,textarea,optgroup{font:inherit;margin:0}optgroup{font-weight:bold}
+button,input{overflow:visible}button,select{text-transform:none}
+button,[type=button],[type=reset],[type=submit]{-webkit-appearance:button}
+button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}
+button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}
+fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}
+legend{color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}
+[type=checkbox],[type=radio]{padding:0}
+[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}
+[type=search]{-webkit-appearance:textfield;outline-offset:-2px}
+[type=search]::-webkit-search-decoration{-webkit-appearance:none}
+::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
+/* The end of the extraction */
+html,body{font-family:Verdana,sans-serif;font-size:15px;line-height:1.5}html{overflow-x:hidden}
+h1{font-size:36px}h2{font-size:30px}h3{font-size:24px}h4{font-size:20px}h5{font-size:18px}h6{font-size:16px}
+.ck-serif{font-family:serif}.ck-sans-serif{font-family:sans-serif}.ck-cursive{font-family:cursive}.ck-monospace{font-family:monospace}
+h1,h2,h3,h4,h5,h6{font-family:"Segoe UI",Arial,sans-serif;font-weight:400;margin:10px 0}.ck-wide{letter-spacing:4px}
+hr{border:0;border-top:1px solid #eee;margin:20px 0}
+.ck-image{max-width:100%;height:auto}img{vertical-align:middle}a{color:inherit}
+.ck-table,.ck-table-all{border-collapse:collapse;border-spacing:0;width:100%;display:table}.ck-table-all{border:1px solid #ccc}
+.ck-bordered tr,.ck-table-all tr{border-bottom:1px solid #ddd}.ck-striped tbody tr:nth-child(even){background-color:#f1f1f1}
+.ck-table-all tr:nth-child(odd){background-color:#fff}.ck-table-all tr:nth-child(even){background-color:#f1f1f1}
+.ck-hoverable tbody tr:hover,.ck-ul.ck-hoverable li:hover{background-color:#ccc}.ck-centered tr th,.ck-centered tr td{text-align:center}
+.ck-table td,.ck-table th,.ck-table-all td,.ck-table-all th{padding:8px 8px;display:table-cell;text-align:left;vertical-align:top}
+.ck-table th:first-child,.ck-table td:first-child,.ck-table-all th:first-child,.ck-table-all td:first-child{padding-left:16px}
+.ck-btn,.ck-button{border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap}
+.ck-btn:hover{box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)}
+.ck-btn,.ck-button{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}   
+.ck-disabled,.ck-btn:disabled,.ck-button:disabled{cursor:not-allowed;opacity:0.3}.ck-disabled *,:disabled *{pointer-events:none}
+.ck-btn.ck-disabled:hover,.ck-btn:disabled:hover{box-shadow:none}
+.ck-badge,.ck-tag{background-color:#000;color:#fff;display:inline-block;padding-left:8px;padding-right:8px;text-align:center}.ck-badge{border-radius:50%}
+.ck-ul{list-style-type:none;padding:0;margin:0}.ck-ul li{padding:8px 16px;border-bottom:1px solid #ddd}.ck-ul li:last-child{border-bottom:none}
+.ck-tooltip,.ck-display-container{position:relative}.ck-tooltip .ck-text{display:none}.ck-tooltip:hover .ck-text{display:inline-block}
+.ck-ripple:active{opacity:0.5}.ck-ripple{transition:opacity 0s}
+.ck-input{padding:8px;display:block;border:none;border-bottom:1px solid #ccc;width:100%}
+.ck-select{padding:9px 0;width:100%;border:none;border-bottom:1px solid #ccc}
+.ck-dropdown-click,.ck-dropdown-hover{position:relative;display:inline-block;cursor:pointer}
+.ck-dropdown-hover:hover .ck-dropdown-content{display:block}
+.ck-dropdown-hover:first-child,.ck-dropdown-click:hover{background-color:#ccc;color:#000}
+.ck-dropdown-hover:hover > .ck-button:first-child,.ck-dropdown-click:hover > .ck-button:first-child{background-color:#ccc;color:#000}
+.ck-dropdown-content{cursor:auto;color:#000;background-color:#fff;display:none;position:absolute;min-width:160px;margin:0;padding:0;z-index:1}
+.ck-check,.ck-radio{width:24px;height:24px;position:relative;top:6px}
+.ck-sidebar{height:100%;width:200px;background-color:#fff;position:fixed!important;z-index:1;overflow:auto}
+.ck-bar-block .ck-dropdown-hover,.ck-bar-block .ck-dropdown-click{width:100%}
+.ck-bar-block .ck-dropdown-hover .ck-dropdown-content,.ck-bar-block .ck-dropdown-click .ck-dropdown-content{min-width:100%}
+.ck-bar-block .ck-dropdown-hover .ck-button,.ck-bar-block .ck-dropdown-click .ck-button{width:100%;text-align:left;padding:8px 16px}
+.ck-main,#main{transition:margin-left .4s}
+.ck-modal{z-index:3;display:none;padding-top:100px;position:fixed;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgb(0,0,0);background-color:rgba(0,0,0,0.4)}
+.ck-modal-content{margin:auto;background-color:#fff;position:relative;padding:0;outline:0;width:600px}
+.ck-bar{width:100%;overflow:hidden}.ck-center .ck-bar{display:inline-block;width:auto}
+.ck-bar .ck-bar-item{padding:8px 16px;float:left;width:auto;border:none;display:block;outline:0}
+.ck-bar .ck-dropdown-hover,.ck-bar .ck-dropdown-click{position:static;float:left}
+.ck-bar .ck-button{white-space:normal}
+.ck-bar-block .ck-bar-item{width:100%;display:block;padding:8px 16px;text-align:left;border:none;white-space:normal;float:none;outline:0}
+.ck-bar-block.ck-center .ck-bar-item{text-align:center}
+
+/* Addition */
+
+:root {
+    --ck-space-xs: 4px;
+    --ck-space-sm: 8px;
+    --ck-space-md: 16px;
+    --ck-space-lg: 24px;
+    --ck-space-xl: 32px;
+    --ck-space-xxl: 64px;
+
+    --ck-breakpoint-sm: 576px;
+    --ck-breakpoint-md: 768px;
+    --ck-breakpoint-lg: 992px;
+    --ck-breakpoint-xl: 1200px;
+
+    --ck-container-padding: 16px;
+    --ck-container-max-width-xl: 1140px;
+    --ck-container-max-width-lg: 960px;
+    --ck-container-max-width-md: 720px;
+    --ck-container-max-width-sm: 540px;
+
+    --ck-flex-direction-row: row;
+    --ck-flex-direction-column: column;
+    --ck-flex-justify-start: flex-start;
+    --ck-flex-justify-center: center;
+    --ck-flex-justify-end: flex-end;
+    --ck-flex-justify-between: space-between;
+    --ck-flex-align-start: flex-start;
+    --ck-flex-align-center: center;
+    --ck-flex-align-end: flex-end;
+    --ck-flex-wrap: wrap;
+    --ck-flex-nowrap: nowrap;
+
+    --ck-primary-color: #A8D5BA; /* Pastel Yeşil */
+    --ck-primary-hover-color: #90C4A6; /* Hover için biraz koyu ton */
+    
+    --ck-secondary-color: #B3DDF2; /* Pastel Mavi */
+    --ck-secondary-hover-color: #99CCE6; /* Hover için biraz koyu ton */
+    
+    --ck-accent-color: #FFD1A9; /* Pastel Turuncu */
+    --ck-accent-hover-color: #FFC089; /* Hover için biraz koyu ton */
+
+    --ck-success-color: #C3E6CB; /* Pastel Başarı Rengi */
+    --ck-error-color: #F8D7DA; /* Pastel Hata Rengi */
+    --ck-warning-color: #FFF3CD; /* Pastel Uyarı Rengi */
+
+    --ck-light-color: #F7F7F7; /* Hafif Arka Plan için */
+    --ck-dark-color: #555555; /* Pastel tonlara uygun koyu metin rengi */
+
+    --ck-font-playfair: 'Playfair Display', serif;
+    --ck-font-montserrat: 'Montserrat', sans-serif;
+    --ck-font-opensans: 'Open Sans', sans-serif;
+    --ck-font-merriweather: 'Merriweather', serif;
+    --ck-font-roboto: 'Roboto', sans-serif;
+    --ck-font-lato: 'Lato', sans-serif;
+    --ck-font-source-sans-pro: 'Source Sans Pro', sans-serif;
+    --ck-font-fira-code: 'Fira Code', monospace;
+    --ck-font-courier-new: 'Courier New', monospace;
+    --ck-font-pacifico: 'Pacifico', cursive;
+    --ck-font-dancing-script: 'Dancing Script', cursive;
+}
+
+.ck-heading-1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.ck-heading-2 {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.3;
+    margin-bottom: 0.9rem;
+}
+
+.ck-heading-3 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    line-height: 1.4;
+    margin-bottom: 0.8rem;
+}
+
+.ck-heading-4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 0.7rem;
+}
+
+.ck-heading-5 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 1.6;
+    margin-bottom: 0.6rem;
+}
+
+.ck-heading-6 {
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.7;
+    margin-bottom: 0.5rem;
+}
+
+.ck-paragraph {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.ck-small-text {
+    font-size: 0.875rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+.ck-link {
+    color: var(--ck-primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.ck-link:hover {
+    text-decoration: underline;
+    color: var(--ck-primary-hover-color);
+}
+
+.ck-margin-sm {
+    margin: var(--ck-space-sm);
+}
+
+.ck-padding-md {
+    padding: var(--ck-space-md);
+}
+
+/* CK Grid Sistem */
+.ck-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -16px;
+    margin-left: -16px;
+}
+
+.ck-col {
+    padding-right: 16px;
+    padding-left: 16px;
+    flex-basis: 100%; /* Varsayılan olarak %100 genişlik */
+}
+
+/* CK Grid Container */
+.ck-container {
+    width: 100%;
+    padding-right: var(--ck-container-padding);
+    padding-left: var(--ck-container-padding);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Flex container tanımı */
+.ck-flex-container {
+    display: flex;
+    flex-wrap: var(--ck-flex-wrap);
+    justify-content: var(--ck-flex-justify-start);
+    align-items: var(--ck-flex-align-start);
+}
+
+.ck-flex-column {
+    flex-direction: var(--ck-flex-direction-column);
+}
+
+.ck-flex-row {
+    flex-direction: var(--ck-flex-direction-row);
+}
+
+/* Yatayda ortalama (justify-content: center) */
+.ck-flex-justify-center {
+    justify-content: var(--ck-flex-justify-center);
+}
+
+/* Yatayda sağa hizalama (justify-content: flex-end) */
+.ck-flex-justify-end {
+    justify-content: var(--ck-flex-justify-end);
+}
+
+/* Dikeyde ortalama (align-items: center) */
+.ck-flex-align-center {
+    align-items: var(--ck-flex-align-center);
+}
+
+/* Yatayda alanı eşit dağıtma (justify-content: space-between) */
+.ck-flex-justify-between {
+    justify-content: var(--ck-flex-justify-between);
+}
+
+/* Flex öğenin esnek olarak büyümesini sağlama */
+.ck-flex-grow {
+    flex-grow: 1;
+}
+
+/* Flex öğeyi sabit boyutta tutma */
+.ck-flex-no-grow {
+    flex-grow: 0;
+}
+
+/* Flex öğelerin eşit oranda büyümesi */
+.ck-flex-equal {
+    flex: 1;
+}
+
+/* CK Temel Düğme Stili */
+.ck-button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.ck-button-primary {
+    background-color: var(--ck-primary-color);
+    color: white;
+}
+
+.ck-button-primary:hover {
+    background-color: var(--ck-primary-hover-color);
+}
+
+.ck-button-secondary {
+    background-color: var(--ck-secondary-color);
+    color: white;
+}
+
+.ck-button-secondary:hover {
+    background-color: var(--ck-secondary-hover-color);
+}
+
+.ck-button-accent {
+    background-color: var(--ck-accent-color);
+    color: white;
+}
+
+.ck-button-accent:hover {
+    background-color: var(--ck-accent-hover-color);
+}
+
+.ck-button-small {
+    padding: 8px 16px;
+    font-size: 0.875rem;
+}
+
+.ck-button-large {
+    padding: 16px 32px;
+    font-size: 1.25rem;
+}
+
+.ck-button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    color: #666666;
+}
+
+.ck-button-active {
+    background-color: var(--ck-primary-hover-color);
+    color: white;
+}
+
+@media (min-width: 1200px) {
+    .ck-container {
+        max-width: var(--ck-container-max-width-xl);
+    }
+}
+
+@media (min-width: 992px) {
+    .ck-container {
+        max-width: var(--ck-container-max-width-lg);
+    }
+
+    .ck-col-lg-3 {
+        flex-basis: 25%; /* Büyük ekranlarda %25 genişlik (4 sütun) */
+    }
+}
+
+@media (min-width: 768px) {
+    .ck-container {
+        max-width: var(--ck-container-max-width-md);
+    }
+    .ck-col-md-4 {
+        flex-basis: 33.33%; /* Orta ekranlarda %33 genişlik (3 sütun) */
+    }
+}
+
+@media (min-width: 576px) {
+    .ck-container {
+        max-width: var(--ck-container-max-width-sm);
+    }
+    .ck-col-sm-6 {
+        flex-basis: 50%; /* Küçük ekranlarda %50 genişlik (2 sütun) */
+    }
+}
