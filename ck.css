@@ -40,7 +40,7 @@ html, body {
     color: #333;  /* Varsayılan metin rengi */
 }
 html{overflow-x:hidden}
-h1{font-size:36px}h2{font-size:30px}h3{font-size:24px}h4{font-size:20px}h5{font-size:18px}h6{font-size:16px}
+/*h1{font-size:36px}h2{font-size:30px}h3{font-size:24px}h4{font-size:20px}h5{font-size:18px}h6{font-size:16px}*/
 .ck-serif{font-family:serif}.ck-sans-serif{font-family:sans-serif}.ck-cursive{font-family:cursive}.ck-monospace{font-family:monospace}
 h1,h2,h3,h4,h5,h6{font-family:"Segoe UI",Arial,sans-serif;font-weight:400;margin:10px 0}.ck-wide{letter-spacing:4px}
 hr{border:0;border-top:1px solid #eee;margin:20px 0}
@@ -149,6 +149,10 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     --ck-font-courier-new: 'Courier New', monospace;
     --ck-font-pacifico: 'Pacifico', cursive;
     --ck-font-dancing-script: 'Dancing Script', cursive;
+}
+
+.ck-xs-font {
+    font-size: 0.6rem;
 }
 
 /* CK Default Spacer - Boşluk Elemanı */
@@ -649,7 +653,6 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 }
 
 /* CK Alert Genel Yapısı */
-/* CK Alert Genel Yapısı */
 .ck-alert {
     padding: 16px;
     border-radius: 4px;
@@ -895,7 +898,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .ck-progress-bar {
     height: 100%; /* Tam yükseklik */
     background-color: var(--ck-primary-color); /* Dolgu rengi */
-    width: 0%; /* Başlangıçta boş */
+    max-width: 100%; /* Başlangıçta boş */
     transition: width 0.4s ease; /* Genişleme animasyonu */
 }
 
@@ -911,6 +914,351 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 
 .ck-progress-bar.danger {
     background-color: var(--ck-danger-color); /* Tehlike */
+}
+
+/* Tooltip Kapsayıcı */
+.ck-tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Tooltip Metni */
+.ck-tooltip .ck-tooltip-text {
+    visibility: hidden;
+    background-color: var(--ck-primary-color); /* Arka plan rengi */
+    color: var(--ck-secondary-color); /* Yazı rengi */
+    text-align: center;
+    padding: 8px;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Tooltip'in elemanın üzerine gelmesi */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    white-space: nowrap; /* Uzun metinlerin tek satırda kalmasını sağlar */
+}
+
+/* Tooltip oku */
+.ck-tooltip .ck-tooltip-text::after {
+    content: '';
+    position: absolute;
+    top: 100%; /* Oku aşağı doğru yerleştir */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--ck-primary-color) transparent transparent transparent; /* Ok rengini ayarla */
+}
+
+/* Tooltip'in görünmesi */
+.ck-tooltip:hover .ck-tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Navbar Kapsayıcı */
+.ck-navbar {
+    background-color: var(--ck-primary-color);
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--ck-secondary-color);
+}
+
+/* Marka (Brand) */
+.ck-navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Navbar Linkleri */
+.ck-navbar-links a {
+    color: var(--ck-secondary-color);
+    text-decoration: none;
+    padding: 8px 16px;
+}
+
+.ck-navbar-links a:hover {
+    background-color: var(--ck-primary-hover-color);
+    border-radius: 4px;
+}
+
+/* Navbar Linkleri Masaüstü İçin */
+.ck-navbar-links {
+    display: flex;
+    gap: 16px;
+}
+
+/* Hamburger Menüsü (Mobil) */
+.ck-navbar-toggle {
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: var(--ck-secondary-color);
+    display: none; /* Masaüstünde gizli */
+    cursor: pointer;
+}
+
+/* Hero Kapsayıcı */
+.ck-hero {
+    background-image: url('https://picsum.photos/800/600'); /* Arka plan resmi */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Tam ekran yüksekliği */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--ck-secondary-color); /* Yazı rengi */
+    position: relative;
+    padding: 0 20px;
+}
+
+/* Hero İçerik */
+.ck-hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Başlık */
+.ck-hero-title {
+    font-size: 3rem;
+    font-family: var(--ck-default-font-family);
+    margin-bottom: 16px;
+    color: var(--ck-primary-color);
+}
+
+/* Alt Başlık */
+.ck-hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+    color: var(--ck-primary-color);
+}
+
+/* Button */
+.ck-button-primary {
+    padding: 12px 24px;
+    font-size: 1rem;
+    background-color: var(--ck-primary-color);
+    color: var(--ck-secondary-color);
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.ck-button-primary:hover {
+    background-color: var(--ck-primary-hover-color);
+}
+
+/* Hero Left Aligned Kapsayıcı */
+.ck-hero-left-aligned {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: var(--ck-secondary-color); /* Arka plan rengi */
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+/* Sol Taraf İçerik */
+.ck-hero-left-content {
+    max-width: 50%;
+}
+
+/* Başlık */
+.ck-hero-title {
+    font-size: 2.5rem;
+    font-family: var(--ck-default-font-family);
+    margin-bottom: 16px;
+    color: var(--ck-primary-color);
+}
+
+/* Alt Başlık */
+.ck-hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 24px;
+    color: var(--ck-primary-color);
+}
+
+/* Buton */
+.ck-button-primary {
+    padding: 12px 24px;
+    font-size: 1rem;
+    background-color: var(--ck-primary-color);
+    color: var(--ck-secondary-color);
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.ck-button-primary:hover {
+    background-color: var(--ck-primary-hover-color);
+}
+
+/* Sağ Taraf Görsel */
+.ck-hero-right-image {
+    max-width: 45%;
+}
+
+.ck-hero-right-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .ck-hero-left-aligned {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ck-hero-left-content,
+    .ck-hero-right-image {
+        max-width: 100%;
+    }
+
+    .ck-hero-title {
+        font-size: 2rem;
+    }
+
+    .ck-hero-subtitle {
+        font-size: 1rem;
+    }
+}
+
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .ck-hero-title {
+        font-size: 2.5rem;
+    }
+
+    .ck-hero-subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* Responsive Ayarlar */
+@media (max-width: 768px) {
+    .ck-navbar{
+        flex-direction: column;
+    }
+    /* Hamburger menü görünür hale gelir */
+    .ck-navbar-toggle {
+        display: block;
+    }
+
+    /* Navbar linkleri gizlenir */
+    .ck-navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--ck-primary-color);
+    }
+
+    /* Hamburger menü açıldığında linkler görünür */
+    .ck-navbar-links.active {
+        display: flex;
+    }
+
+    .ck-navbar-links a {
+        padding: 12px 0;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* Features Kapsayıcı */
+.ck-features {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 40px 0;
+    background-color: var(--ck-secondary-color);
+}
+
+/* Her Bir Feature Kartı */
+.ck-feature {
+    flex: 1;
+    min-width: 280px;
+    text-align: center;
+    padding: 20px;
+    background-color: var(--ck-primary-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Hover Efekti */
+.ck-feature:hover {
+    transform: translateY(-10px);
+}
+
+/* İkon */
+.ck-feature-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 16px;
+}
+
+/* Başlık */
+.ck-feature-title {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    color: var(--ck-secondary-color);
+}
+
+/* Açıklama */
+.ck-feature-desc {
+    font-size: 1rem;
+    color: var(--ck-secondary-color);
+}
+
+/* İkon Boyutları */
+.ck-tiny {
+    font-size: 12px; /* Küçük boyut */
+}
+
+.ck-small {
+    font-size: 16px; /* Küçükten biraz büyük */
+}
+
+.ck-large {
+    font-size: 24px; /* Büyük boyut */
+}
+
+.ck-xxlarge {
+    font-size: 32px; /* Çok büyük boyut */
+}
+
+.ck-xxxlarge {
+    font-size: 48px; /* Çok daha büyük */
+}
+
+.ck-jumbo {
+    font-size: 64px; /* En büyük boyut */
+}
+
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+    .ck-features {
+        flex-direction: column;
+    }
+
+    .ck-feature {
+        margin-bottom: 20px;
+    }
 }
 
 
@@ -938,6 +1286,8 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
     .ck-col-md-4 {
         flex-basis: 33.33%; /* Orta ekranlarda %33 genişlik (3 sütun) */
     }
+
+    
 }
 
 @media (min-width: 576px) {

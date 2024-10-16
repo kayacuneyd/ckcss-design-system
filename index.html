@@ -6,8 +6,24 @@
 
     <title>CK CSS DESIGN SYSTEM</title>
     <link rel="stylesheet" href="ck.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+    <nav class="ck-navbar">
+        <div class="ck-navbar-brand">CK Design</div>
+        <div class="ck-navbar-links" id="navbarLinks">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+        <button class="ck-navbar-toggle" onclick="toggleMenu()">&#9776;</button> <!-- Hamburger Menüsü -->
+    </nav>
+
+    <div class="ck-spacer-lg"></div>
+
+    <div class="ck-spacer-lg"></div>  
+
     <div class="ck-flex-container ck-flex-row ck-flex-justify-center">
 
         <div class="ck-row">
@@ -205,28 +221,29 @@
     <div class="ck-flex-container ck-flex-justify-center">
         <div class="ck-flex-column">
             <!-- Bilgi Alert -->
-                <div class="ck-alert ck-alert-info">
-                    Bu bir bilgi mesajıdır!
-                    <span class="ck-alert-close" onclick="this.parentElement.style.display='none';">&times;</span>
-                </div>
+            <div class="ck-alert ck-alert-info">
+                Bu bir bilgi mesajıdır!
+                <span class="ck-alert-close" onclick="this.parentElement.style.display='none';">&times;</span>
+            </div>
 
-                <!-- Başarı Alert -->
-                <div class="ck-alert ck-alert-success">
-                    İşleminiz başarıyla tamamlandı!
-                    <span class="ck-alert-close" onclick="this.parentElement.style.display='none';">&times;</span>
-                </div>
+            <!-- Başarı Alert -->
+            <div class="ck-alert ck-alert-success">
+                İşleminiz başarıyla tamamlandı!
+                <span class="ck-alert-close" onclick="this.parentElement.style.display='none';">&times;</span>
+            </div>
 
-                <!-- Uyarı Alert -->
-                <div class="ck-alert ck-alert-warning">
-                    Dikkat, bu bir uyarı mesajıdır!
-                    <span class="ck-alert-close" onclick="this.parentElement.style.display='none';">&times;</span>
-                </div>
+            <!-- Uyarı Alert -->
+            <div class="ck-alert ck-alert-warning">
+                Dikkat, bu bir uyarı mesajıdır!
+                <span class="ck-alert-close" onclick="this.parentElement.style.display='none';">&times;</span>
+            </div>
 
-                <!-- Hata Alert -->
-                <div class="ck-alert ck-alert-danger">
-                    Bir hata oluştu, lütfen tekrar deneyin!
-                    <span class="ck-alert-close" onclick="this.parentElement.style.display='none';">&times;</span>
-                </div>
+            <!-- Hata Alert -->
+            <div class="ck-alert ck-alert-danger">
+                Bir hata oluştu, lütfen tekrar deneyin!
+                <span class="ck-alert-close" onclick="this.parentElement.style.display='none';">&times;</span>
+            </div>
+
         </div>
     </div>
 
@@ -271,23 +288,6 @@
             <p>Bu, Sekme 3'ün içeriğidir.</p>
         </div>
 
-        <script>
-        function openTab(event, tabName) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("ck-tab-content");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-            tablinks = document.getElementsByClassName("ck-tab-item");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-            document.getElementById(tabName).style.display = "block";
-            event.currentTarget.className += " active";
-        }
-        </script>
-
-
         <div class="ck-spacer-lg"></div>
 
         <div class="ck-dropdown">
@@ -311,25 +311,27 @@
             <!-- Accordion 1 -->
             <button class="ck-accordion">Soru 1: Accordion Başlığı</button>
             <div class="ck-panel">
-                <p>Bu, accordion içeriğidir. Kullanıcı burayı tıkladığında içerik görünür olur.</p>
+                <p class="ck-xs-font">Bu, accordion içeriğidir. Kullanıcı burayı tıkladığında içerik görünür olur.</p>
             </div>
 
             <!-- Accordion 2 -->
             <button class="ck-accordion">Soru 2: Accordion Başlığı</button>
             <div class="ck-panel">
-                <p>Bu da ikinci accordion içeriği. Accordion bileşeniyle içerik gizlenip açılabilir.</p>
+                <p class="ck-xs-font">Bu da ikinci accordion içeriği. Accordion bileşeniyle içerik gizlenip açılabilir.</p>
             </div>
 
             <!-- Accordion 3 -->
             <button class="ck-accordion">Soru 3: Accordion Başlığı</button>
             <div class="ck-panel">
-                <p>Üçüncü accordion içeriği. Kullanıcı burayı tıkladığında içerik gösterilir.</p>
+                <p class="ck-xs-font">Üçüncü accordion içeriği. Kullanıcı burayı tıkladığında içerik gösterilir.</p>
             </div>
 
         </div>
 
 
     </div>
+
+    <div class="ck-spacer-lg"></div>
 
     <div class="ck-flex-container ck-flex-justify-center">
         <div class="ck-flex-column">
@@ -344,15 +346,85 @@
         </div>
     </div>
 
+    <div class="ck-spacer-lg"></div>
+
     <div class="ck-flex-container ck-flex-justify-center">
         <div class="ck-flex-column">
             <div class="ck-progress">
                 <!-- Dolgu kısmı, genişlik inline style ile ayarlanıyor -->
-                <div class="ck-progress-bar" style="width: 60%;"></div>
+                <div class="ck-progress-bar" style="width: 150px;"></div>
             </div>
             
         </div>
     </div>
+
+    <div class="ck-spacer-lg"></div>
+
+    <div class="ck-flex-container ck-flex-justify-center">
+        <div class="ck-flex-column">
+            <div class="ck-tooltip">Üzerine gel
+                <span class="ck-tooltip-text">Bu bir tooltip mesajıdır</span>
+            </div>
+            <div class="ck-spacer-lg"></div>
+            <div class="ck-tooltip">Başka bir öğe
+                <span class="ck-tooltip-text">Bu da bir başka tooltip mesajıdır</span>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="ck-spacer-lg"></div>
+
+
+            <section class="ck-hero">
+                <div class="ck-hero-content">
+                    <h1 class="ck-hero-title">Welcome to CK Design System</h1>
+                    <p class="ck-hero-subtitle">Building beautiful and functional interfaces.</p>
+                    <a href="#learn-more" class="ck-button ck-button-primary">Learn More</a>
+                </div>
+            </section>
+
+
+    <div class="ck-spacer-lg"></div>
+
+    <div class="ck-flex-container ck-flex-justify-center">
+        <div class="ck-flex-column">
+                XXXX
+        </div>
+    </div>
+
+    <section class="ck-hero-left-aligned">
+        <div class="ck-hero-left-content">
+            <h1 class="ck-hero-title">Explore CK Design System</h1>
+            <p class="ck-hero-subtitle">Create fast, scalable, and beautiful web applications with our design system.</p>
+            <a href="#learn-more" class="ck-button ck-button-primary">Learn More</a>
+        </div>
+        <div class="ck-hero-right-image">
+            <img src="https://picsum.photos/536/354" alt="Design illustration">
+        </div>
+    </section>
+
+    <section class="ck-features">
+        <div class="ck-feature">
+            <img src="path-to-icon1.svg" alt="Icon 1" class="ck-feature-icon">
+            <h3 class="ck-feature-title">Feature One</h3>
+            <p class="ck-feature-desc">This is a brief description of the first feature. It explains the benefits and key points.</p>
+        </div>
+    
+        <div class="ck-feature">
+            <img src="path-to-icon2.svg" alt="Icon 2" class="ck-feature-icon">
+            <h3 class="ck-feature-title">Feature Two</h3>
+            <p class="ck-feature-desc">This is a brief description of the second feature. Highlight the key benefits here.</p>
+        </div>
+    
+        <div class="ck-feature">
+            <img src="path-to-icon3.svg" alt="Icon 3" class="ck-feature-icon">
+            <h3 class="ck-feature-title">Feature Three</h3>
+            <p class="ck-feature-desc">This is a brief description of the third feature, explaining its advantages.</p>
+        </div>
+    </section>
+    
+    
     
     <script src="ckcss.js"></script>
 </body>
